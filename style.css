@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    max-width: 100%;
+    }
+
+
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    padding-left: 10%;
+    padding-top: 35px;
+    column-gap: 1.5rem;
+    }
+
+
+@media all and (max-width:742px){
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 80%;
+        }
+
+
+}
+
+
+@media all and (min-width: 767px){
+
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+        max-width: 90%;
+        }
+
+    gallery-grid .img{
+        object-fit:fill;
+    }
+
+}
+
+.gallery-grid a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#myBtn {
+   
+    position: fixed;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: green;
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: rgb(6, 2, 2); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+
+  }
+
+
+nav{
+    background: #312884;
+    width: 100%;
+    padding: 10px 10px;
+   
+}
+
+.logo{
+    width: 120px;  
+}
+
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+nav ul{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+    align-items: center; 
+    
+}
+
+nav ul li{
+    
+    list-style: none;
+    margin: 10px 20px;
+}
+
+
+nav a{
+    color: rgb(237, 234, 235);
+    display: block;
+    list-style: none;
+    text-decoration: none;
+}
+
+.submenuweap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height:0px;
+    overflow: none;
+    transition: max-height 0.5s;
+}
+
+
+.submenuweap.open-menu{
+    max-height: 400px;
+}
+
+
+.submenu{
+    background: palevioletred;
+    padding: 20px;
+    margin: 10px;
+}
+
+.userinfo{
+    display: flex;
+    align-items: center;
+}
+
+.userinfo h2{
+    font-weight: 500;
+}
+
+.userinfo img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15;
+}
+
+.submenulink{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: azure;
+    margin: 12px 0;
+}
+
+.submenulink p{
+    width: 100%;
+}
+
+.submenulink i{
+    width: 40px;
+    color: aliceblue;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.submenulink span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.submenulink:hover span{
+    transform:translateX(5px);
+}
+
+.submenulink:hover p{
+    font-weight: 600;
+}
